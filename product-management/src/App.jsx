@@ -90,7 +90,7 @@ function App() {
     if (product.id) {
       setProducts(products.map((p) => (p.id === product.id ? product : p)));
     } else {
-      setProducts([...products, { ...product, id: Date.now() }]);
+      setProducts([{ ...product, id: Date.now() }, ...products]);
     }
     setSelectedProduct(null);
   };
